@@ -1,0 +1,34 @@
+Manchmal möchte man Typen einen anderen Namen geben, einen sogenannten Alias.
+
+zb. 
+
+Bei Eigenen Typen immer UpperCemalCase verwenden
+type MyNumber = number 
+
+
+const aNumber: MyNumber = 1
+
+const anotherNumber:number = aNumber
+
+
+Union Type
+
+type StringOrNumber = string | number
+
+
+const bString:StringOrNumber = "Ein String"
+const bNumber:StringOrNumber = 2
+
+
+function printId(id: StringOrNumber){
+    console.log("Deine ID ist: "+id)
+}
+
+printId("1d21")
+printId(423)
+
+
+alternativ: 
+function printId(id: string | number){
+    console.log("Deine ID ist: "+id)
+}
